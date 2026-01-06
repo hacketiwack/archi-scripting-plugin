@@ -16,11 +16,8 @@
   </modules>
 
   <properties>
-    <!-- Archi currently requires Java 17 -->
-    <maven.compiler.release>17</maven.compiler.release>
-
-    <!-- Match Archi’s Tycho version -->
-    <tycho.version>4.0.8</tycho.version>
+    <maven.compiler.release>21</maven.compiler.release>
+    <tycho.version>5.0.1</tycho.version>
   </properties>
 
   <build>
@@ -46,7 +43,7 @@
     <repository>
       <id>eclipse</id>
       <layout>p2</layout>
-      <url>https://download.eclipse.org/releases/2023-12</url>
+      <url>https://download.eclipse.org/releases/2025-09</url>
     </repository>
   </repositories>
 
