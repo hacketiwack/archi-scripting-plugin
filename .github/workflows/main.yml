@@ -32,7 +32,9 @@ jobs:
         run: mvn -B clean -DskipTests verify
 
       - name: Build plugin with Tycho
-        run: mvn -B clean -DskipTests verify
+        run: |
+          PLUGIN_P2=$(pwd)/archi/releng/com.archimatetool.repository/target/repository
+          mvn -B -DskipTests -Darchi.p2.repo=$PLUGIN_P2 clean verify
 
       - name: Upload plugin JAR
         uses: actions/upload-artifact@v4
