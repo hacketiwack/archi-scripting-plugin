@@ -89,11 +89,11 @@
       <layout>p2</layout>
       <url>https://download.eclipse.org/releases/2025-12</url>
     </repository>
-    <repository>
-        <id>archi-local</id>
-        <layout>p2</layout>
-        <url>${archi.p2.repo}</url>
-    </repository>
+          <repository>
+            <id>archi-local-jars</id>
+            <layout>directory</layout>
+            <url>${basedir}/libs</url>
+          </repository>>
   </repositories>
 
 </project>
