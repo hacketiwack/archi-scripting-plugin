@@ -34,7 +34,7 @@ jobs:
       - name: Build plugin with Tycho
         run: |
           ARCHI_REPO=$GITHUB_WORKSPACE #/archi/releng/com.archimatetool.repository/target/repository
-          echo "Current directory: $(realpath ./)"
+          echo "Current directory: $(realpath ./../../archi)"
           echo "Arch repo: $ARCHI_REPO"
           mvn -B -q clean verify -Darchi.p2.repo=$ARCHI_REPO
 
