@@ -33,8 +33,8 @@ jobs:
 
       - name: Build plugin with Tycho
         run: |
-          ARCHI_REPO=$(realpath ./../../archi/)
-          find ../../archi -type d
+          ARCHI_REPO=$(realpath  /home/runner/work/archi-scripting-plugin/archi-scripting-plugin/archi)
+          find  /home/runner/work/archi-scripting-plugin/archi-scripting-plugin/archi -type d
           echo "Arch repo: $ARCHI_REPO"
           mvn -B -q clean verify -Darchi.p2.repo=$ARCHI_REPO
 
