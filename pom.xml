@@ -92,7 +92,7 @@
     <repository>
         <id>archi-local</id>
         <layout>p2</layout>
-        <url>file://../archi/releng/com.archimatetool.repository/target/repository</url>
+        <url>${archi.p2.repo}</url>
     </repository>
   </repositories>
 
