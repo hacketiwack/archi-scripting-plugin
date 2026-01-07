@@ -33,8 +33,9 @@ jobs:
 
       - name: Build plugin with Tycho
         run: |
-          PLUGIN_P2=$(pwd)/archi/releng/com.archimatetool.repository/target/repository
-          mvn -B -DskipTests -Darchi.p2.repo=$PLUGIN_P2 clean verify
+          ARCHI_REPO=$(pwd)/archi/releng/com.archimatetool.repository/target/repository
+          echo "Arch repo: $ARCHI_REPO"
+          mvn -B clean verify -Darchi.p2.repo=$ARCHI_REPO
 
       - name: Upload plugin JAR
         uses: actions/upload-artifact@v4
