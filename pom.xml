@@ -93,7 +93,7 @@
             <id>archi-local-jars</id>
             <layout>directory</layout>
             <url>${basedir}/libs</url>
-          </repository>>
+          </repository>
   </repositories>
 
 </project>
