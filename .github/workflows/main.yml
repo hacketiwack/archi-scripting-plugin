@@ -33,10 +33,9 @@ jobs:
 
       - name: Build plugin with Tycho
         run: |
-          ARCHI_REPO=$(realpath  /home/runner/work/archi-scripting-plugin/archi-scripting-plugin/archi)
-          find  /home/runner/work/archi-scripting-plugin/archi-scripting-plugin/archi -type f -iname "*.jar"
-          echo "Arch repo: $ARCHI_REPO"
-          mvn -B -q clean verify -Darchi.p2.repo=$ARCHI_REPO
+          mkdir -p libs
+          find archi -type f -path "*/target/*.jar" -exec cp {} libs/ \;
+          mvn -B -q clean verify
 
       - name: Upload plugin JAR
         uses: actions/upload-artifact@v4
