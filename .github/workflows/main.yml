@@ -34,6 +34,7 @@ jobs:
       - name: Build plugin with Tycho
         run: |
           ARCHI_REPO=$(realpath ./../../archi/releng/com.archimatetool.repository/target/repository)
+          find ../../archi -type d
           echo "Arch repo: $ARCHI_REPO"
           mvn -B -q clean verify -Darchi.p2.repo=$ARCHI_REPO
 
