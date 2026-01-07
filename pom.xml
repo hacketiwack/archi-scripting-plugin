@@ -89,6 +89,11 @@
       <layout>p2</layout>
       <url>https://download.eclipse.org/releases/2025-12</url>
     </repository>
+    <repository>
+        <id>archi-local</id>
+        <layout>p2</layout>
+        <url>file://${project.basedir}/archi/releng/com.archimatetool.repository/target/repository</url>
+    </repository>
   </repositories>
 
 </project>
